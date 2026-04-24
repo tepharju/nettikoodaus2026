@@ -12,10 +12,12 @@ def nayta_tulos():
     luku2 = request.args.get("luku2")
     return "Näiden lukujen summa on %s" % (float(luku1) + float(luku2))
 
+
 @app.route("/seikkailu")
 def nayta_laatikko_sivu():
     return """
 
+    <img src="/static/cat.png">
     <p>Laita tähän kaksi lukua:
     <form action="/tulos" enctype="application/x-www-urlencoded">
     Eka luku: <input name=luku1 type=text <br>
